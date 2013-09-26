@@ -1,8 +1,7 @@
 class User < ActiveRecord::Base
   attr_reader :entered_password
 
-  has_many :skills
-  
+  has_many :skills, :through => :skills_users
 
   validates :name, :length => { :minimum => 3, :message => "must be at least 3 characters, fool!" }
   validates :entered_password, :length => { :minimum => 6 }

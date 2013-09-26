@@ -10,14 +10,17 @@
       <th>Formal?</th>
       <th>
     </tr>
+
     <tr>
-      <% @user.each do |attributes| %>
-      <td> <%= attributes.name %>
-      <td> <%= attributes.skill %>
-      <td> <%= attributes.years_experience %>
-      <td> <%= attributes.formal_training %>
-    <% end %>
+      <td><% @users.each do |attributes| %>
+      <td><%= attributes.name %></td>
+      <td><%= attributes.skill %></td>
+      <td><%= attributes.years_experience %></td>
+      <td><%= attributes.formal_training %> </td>
+          <% end %>
+      </td>
     </tr>
+  </table>
 
   </table>
 </div>
